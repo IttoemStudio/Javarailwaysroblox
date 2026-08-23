@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Railways Roblox</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- THEME TOGGLE BUTTON -->
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-content glass-card">
+      <div class="badge"><i class="fa-solid fa-train-subway"></i> Official Portal</div>
+      <h1>Java Railways Roblox</h1>
+      <p>Website Informasi Resmi Komunitas & Game JRR</p>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-container">
+      <button id="btn-home" class="nav-btn active" onclick="showSection('home')"><i class="fa-solid fa-house"></i> Home</button>
+      <button id="btn-gamelink" class="nav-btn" onclick="showSection('gamelink')"><i class="fa-solid fa-gamepad"></i> Game Link</button>
+      <button id="btn-rute" class="nav-btn" onclick="showSection('rute')"><i class="fa-solid fa-map"></i> Rute</button>
+      <button id="btn-links" class="nav-btn" onclick="showSection('links')"><i class="fa-solid fa-link"></i> Link</button>
+      <button id="btn-Partner" class="nav-btn" onclick="showSection('Partner')"><i class="fa-solid fa-handshake"></i> Partner</button>
+      <button id="btn-sarana" class="nav-btn" onclick="showSection('sarana')"><i class="fa-solid fa-train"></i> Sarana</button>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTAINER -->
+  <main class="container">
+
+    <!-- HOME SECTION -->
+    <section id="home" class="section active">
+      <div class="section-header">
+        <h2>Java Railway Roblox Corporation</h2>
+        <p>Kami Siap Melayani Anda Sepenuh Hati</p>
+      </div>
+
+      <!-- SLIDER GAMBAR -->
+      <div class="slider-wrapper">
+        <div class="slider">
+          <div class="slides">
+            <img src="img/jr2051.png" alt="JR 205 Series" class="slide-img active">
+            <img src="img/ie305.webp" alt="iE305 Series" class="slide-img">
+            <img src="img/tm6000.png" alt="Tokyo Metro 6000" class="slide-img">
+          </div>
+
+          <!-- Slider Controls -->
+          <button class="slider-btn prev" onclick="changeSlide(-1)" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="slider-btn next" onclick="changeSlide(1)" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
+          
+          <div class="slider-indicators">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAME LINK SECTION -->
+    <section id="gamelink" class="section">
+      <div class="section-header">
+        <h2>Pilihan Game Roblox</h2>
+        <p>Akses langsung ke peta dan rute permainan Java Railways Roblox</p>
+      </div>
+
+      <div class="gamelink-list">
+        <!-- Game 1 -->
+        <div class="game-card">
+          <div class="game-img-box">
+            <img src="img/dopt5.png" alt="Java Railways Roblox DOPT 5">
+          </div>
+          <div class="game-info">
+            <div class="game-badge">Operational Only</div>
+            <div class="game-badge secondary">16+</div>
+            <h3>Java Railways Roblox - DOPT 5</h3>
+            <p>Jelajahi peta operasional DOPT 5 dengan berbagai pilihan sarana KRL modern, sistem persinyalan realistis, dan rute perjalanan komuter yang seru.</p>
+          </div>
+          <div class="game-action">
+            <a href="https://www.roblox.com/games/106139087376567/Java-Railways-Roblox" target="_blank" class="view-game-btn">
+              <span>View Game</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Game 2 -->
+        <div class="game-card">
+          <div class="game-img-box">
+            <img src="img/Freedrive.png" alt="Java Railways Roblox - Freedrive">
+          </div>
+          <div class="game-info">
+            <div class="game-badge secondary">Free To Drive</div>
+            <div class="game-badge secondary">All Ages</div>
+            <h3>Java Railways Roblox - Freedrive</h3>
+            <p>Peta operasional sekunder dengan rute ekspres khusus, jalur stabling depot, serta simulasi langsiran sarana kereta api.</p>
+          </div>
+          <div class="game-action">
+            <a href="https://www.roblox.com/games/106139087376567/Java-Railways-Roblox" target="_blank" class="view-game-btn">
+              <span>View Game</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RUTE SECTION -->
+    <section id="rute" class="section">
+      <div class="section-header">
+        <h2>Map DOPT 5 JRR</h2>
+        <p>Peta rute dan jalur operasional utama Java Railways Roblox</p>
+      </div>
+      
+      <div class="rute-card">
+        <div class="rute-img-container">
+          <img src="img/rutedopt5.webp" alt="Map DOPT 5 JRR">
+        </div>
+        <div class="rute-info">
+          <i class="fa-solid fa-circle-info"></i> Jalur DOPT 5 mencakup stasiun-stasiun utama dengan sistem sinyal dan operasional yang presisi.
+        </div>
+      </div>
+    </section>
+
+    <!-- LINKS SECTION -->
+    <section id="links" class="section">
+      <div class="section-header">
+        <h2>Tautan Resmi JRR</h2>
+        <p>Akses komunitas dan media sosial resmi Ittoem Studio</p>
+      </div>
+
+      <div class="links-grid">
+        <a href="https://discord.gg/T7TnutcDwp" target="_blank" class="link-card discord">
+          <div class="link-icon"><i class="fa-brands fa-discord"></i></div>
+          <div class="link-text">
+            <span class="link-title">Discord Server</span>
+            <span class="link-sub">Bergabung dengan komunitas</span>
+          </div>
+        </a>
+
+        <a href="https://www.roblox.com/communities/34686358/Ittoem-Studio#!/about" target="_blank" class="link-card roblox">
+          <div class="link-icon"><i class="fa-solid fa-gamepad"></i></div>
+          <div class="link-text">
+            <span class="link-title">Roblox Group</span>
+            <span class="link-sub">Ittoem Studio Community</span>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/ittoem_studio?igsh=b3oweWY4aGs2MWY2" target="_blank" class="link-card instagram">
+          <div class="link-icon"><i class="fa-brands fa-instagram"></i></div>
+          <div class="link-text">
+            <span class="link-title">Instagram</span>
+            <span class="link-sub">@ittoem_studio</span>
+          </div>
+        </a>
+
+        <a href="https://www.tiktok.com/@ittoemstudio?is_from_webapp=1&sender_device=pc" target="_blank" class="link-card tiktok">
+          <div class="link-icon"><i class="fa-brands fa-tiktok"></i></div>
+          <div class="link-text">
+            <span class="link-title">TikTok</span>
+            <span class="link-sub">@ittoemstudio</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- PARTNER SECTION -->
+    <section id="Partner" class="section">
+      <div class="section-header">
+        <h2>Partner Resmi Ittoem Studio</h2>
+        <p>Kolaborasi dan mitra pengembang game perkeretaapian Roblox</p>
+      </div>
+
+      <div class="partner-grid">
+        <div class="partner-card">
+          <div class="partner-img-wrapper">
+            <img src="img/Tetsudo.webp" alt="Tetsudo-no-Jatiwarna">
+          </div>
+          <div class="partner-body">
+            <h3>Tetsudo-no-Jatiwarna</h3>
+            <p>Didirikan pada tahun 2022 untuk mengembangkan game perkeretaapian Roblox. Salah satu karyanya adalah IER (Indonesian Electric Railway) berlatar Jabodetabek 2023-2024 dengan armada komuter bekas Jepang, CRRC, dan PT INKA.</p>
+            <a href="https://discord.gg/m3FNZQtGVR" target="_blank" class="partner-btn">
+              <span>Kunjungi Partner</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="partner-card">
+          <div class="partner-img-wrapper">
+            <img src="img/TPRS.webp" alt="Toto Public Rapid Service">
+          </div>
+          <div class="partner-body">
+            <h3>Toto Public Rapid Service</h3>
+            <p>Game Kereta Rel Listrik bertemakan Jepang dengan trainset realistis. Anda dapat mengelilingi stasiun dan menjelajahi semua jaringan kereta di Jepang dengan sensasi otentik.</p>
+            <a href="https://discord.gg/zT8WpMNxQ7" target="_blank" class="partner-btn">
+              <span>Kunjungi Partner</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="partner-card">
+          <div class="partner-img-wrapper">
+            <img src="img/ksc.webp" alt="Kereta Sarana Content">
+          </div>
+          <div class="partner-body">
+            <h3>Kereta Sarana Content</h3>
+            <p>Mitra penyedia seragam roleplay resmi (Masinis, Kondektur, PPKA, Teknisi, dll). KSC juga melayani pemesanan seragam kustom dengan nama dan pangkat untuk pengalaman roleplay yang lebih imersif.</p>
+            <a href="https://discord.gg/pKbFtAPBtJ" target="_blank" class="partner-btn">
+              <span>Kunjungi Partner</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="partner-card">
+          <div class="partner-img-wrapper">
+            <img src="img/evosan.webp" alt="Evosan Heavy Industries">
+          </div>
+          <div class="partner-body">
+            <h3>Evosan Heavy Industries</h3>
+            <p>Pengembang <em>Trains Of Indonesia</em>, game bertema perkeretaapian Indonesia yang menghadirkan variasi armada diesel hingga elektrik serta membuka aspirasi pengembangan dari komunitas.</p>
+            <a href="https://discord.gg/Xt3WTTh5Pv" target="_blank" class="partner-btn">
+              <span>Kunjungi Partner</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SARANA SECTION -->
+    <section id="sarana" class="section">
+      <div class="section-header">
+        <h2>Daftar Sarana Kereta</h2>
+        <p>Armada KRL dan Trainset resmi yang beroperasi di Java Railways Roblox</p>
+      </div>
+
+      <div class="sarana-grid">
+        <div class="sarana-card">
+          <div class="sarana-img-box">
+            <img src="img/jr205.png" alt="JR 205">
+            <span class="sarana-tag">JR East Series</span>
+          </div>
+          <div class="sarana-info">
+            <h4>JR 205 Series</h4>
+            <p>Armada standar komuter dengan performa andal dan kapasitas penumpang tinggi.</p>
+          </div>
+        </div>
+
+        <div class="sarana-card">
+          <div class="sarana-img-box">
+            <img src="img/jr205marchen.webp" alt="JR 205 Marchen Face">
+            <span class="sarana-tag">JR East Series</span>
+          </div>
+          <div class="sarana-info">
+            <h4>JR 205 Marchen</h4>
+            <p>Varian JR 205 dengan desain wajah unik khas rute Musashino Line.</p>
+          </div>
+        </div>
+
+        <div class="sarana-card">
+          <div class="sarana-img-box">
+            <img src="img/tm6000.png" alt="Tokyo Metro 6000">
+            <span class="sarana-tag">Metro Series</span>
+          </div>
+          <div class="sarana-info">
+            <h4>Tokyo Metro 6000</h4>
+            <p>Armada legendaris Chiyoda Line dengan kaca depan asimetris yang ikonik.</p>
+          </div>
+        </div>
+
+        <div class="sarana-card">
+          <div class="sarana-img-box">
+            <img src="img/tm7000.webp" alt="Tokyo Metro 7000">
+            <span class="sarana-tag">Metro Series</span>
+          </div>
+          <div class="sarana-info">
+            <h4>Tokyo Metro 7000</h4>
+            <p>KRL perkotaan tangguh berdesain klasik eks jalur Yurakucho Line.</p>
+          </div>
+        </div>
+
+        <div class="sarana-card">
+          <div class="sarana-img-box">
+            <img src="img/tm05.webp" alt="Tokyo Metro 05">
+            <span class="sarana-tag">Metro Series</span>
+          </div>
+          <div class="sarana-info">
+            <h4>Tokyo Metro 05</h4>
+            <p>Armada modern eks Tozai Line dengan bodi aluminium yang aerodinamis.</p>
+          </div>
+        </div>
+
+        <div class="sarana-card">
+          <div class="sarana-img-box">
+            <img src="img/ie305.webp" alt="iE305">
+            <span class="sarana-tag special">Indonesian EMU</span>
+          </div>
+          <div class="sarana-info">
+            <h4>iE305 Series</h4>
+            <p>Armada ekspres khusus dengan livery eksklusif khas Java Railways Roblox.</p>
+          </div>
+        </div>
+
+        <div class="sarana-card">
+          <div class="sarana-img-box">
+            <img src="img/tokyu8500.webp" alt="Tokyu 8500">
+            <span class="sarana-tag">Tokyu Series</span>
+          </div>
+          <div class="sarana-info">
+            <h4>Tokyu 8500</h4>
+            <p>KRL berbodi stainless steel kokoh dengan suara motor traksi yang khas.</p>
+          </div>
+        </div>
+
+        <div class="sarana-card">
+          <div class="sarana-img-box">
+            <img src="img/tokyu8500jalita.webp" alt="Tokyu 8500 Jalita">
+            <span class="sarana-tag special">Special Livery</span>
+          </div>
+          <div class="sarana-info">
+            <h4>Tokyu 8500 Jalita</h4>
+            <p>Edisi khusus Tokyu 8500 dengan skema warna dan identitas khas Jalita.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 <strong>Ittoem Studio</strong>. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Tab Navigation Switcher
+    function showSection(sectionId) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+      
+      const targetSection = document.getElementById(sectionId);
+      const targetBtn = document.getElementById('btn-' + sectionId);
+      
+      if (targetSection) targetSection.classList.add('active');
+      if (targetBtn) targetBtn.classList.add('active');
+    }
+
+    // Theme Switcher Logic
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+      const icon = document.querySelector('#theme-toggle i');
+      if (document.body.classList.contains('light-mode')) {
+        icon.className = 'fa-solid fa-sun';
+      } else {
+        icon.className = 'fa-solid fa-moon';
+      }
+    }
+
+    // Smooth Slider Logic (Class Active Based)
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-img');
+    const dots = document.querySelectorAll('.dot');
+
+    function updateSlider() {
+      slides.forEach((img, index) => {
+        if (index === currentSlide) {
+          img.classList.add('active');
+        } else {
+          img.classList.remove('active');
+        }
+      });
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      updateSlider();
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateSlider();
+    }
+
+    let sliderInterval = setInterval(() => changeSlide(1), 5000);
+
+    // Pause autoplay on mouse hover
+    const sliderContainer = document.querySelector('.slider');
+    if (sliderContainer) {
+      sliderContainer.addEventListener('mouseenter', () => clearInterval(sliderInterval));
+      sliderContainer.addEventListener('mouseleave', () => {
+        sliderInterval = setInterval(() => changeSlide(1), 5000);
+      });
+    }
+
+    updateSlider();
+  </script>
+</body>
+</html>
